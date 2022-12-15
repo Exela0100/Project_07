@@ -1,0 +1,85 @@
+// --- Reset
+//@import-normalize;
+
+*, *::before, *::after, {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+::before, ::after, {
+	text-decoration: inherit;
+	vertical-align: inherit;
+}
+
+body, button, h1, h2, h3, h4, h5, h6, input, nav, select, textarea, ul, ol, dl, p {
+	margin: 0;
+	padding: 0;
+}
+
+a, button, input[type="submit"], {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+a, button, input, select, textarea{
+	font-family: $font !important;
+	font-size: 16px;
+	background: none;
+	color: inherit;
+	border: none;
+	text-transform: none;
+	text-decoration: none;
+	outline: none;
+
+	@include tms(.3s);
+
+	&:focus {
+		outline: none;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+img{
+	display: block !important;
+}
+
+body{
+	font-family: $font;
+	font-size: 16px;
+	//overflow: hidden;
+	background-color: $back;
+}
+
+main{
+	padding-top: $header_height;
+}
+
+.center{
+	@include center($desktop);
+}
+
+::selection{
+	background-color: $primary;
+	color: white;
+}
+
+::-webkit-scrollbar {
+	transition: all .5s ease-in-out;
+	width: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: $back;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $primary;
+	transition: all .5s ease-in-out;
+	border-radius: 10px;
+}

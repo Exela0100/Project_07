@@ -1,0 +1,93 @@
+// --- Import
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// --- Carousel
+.carousel{
+	position: relative;
+	height: 415px;
+	width: 100%;
+	border-radius: 25px;
+	overflow: hidden;
+
+	// --- Items
+	.carousel_items{
+		height: 415px;
+		width: 100%;
+		white-space: nowrap;
+
+		@include tms(.3s);
+
+		// --- Item
+		.carousel_item{
+			width: 100%;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 415px;
+
+			img{
+				width: 100%;
+				height: 415px;
+				object-fit: cover;
+			}
+		}
+	}
+
+	// --- Indicator
+	.carousel_indicator{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		button{
+			position: absolute;
+			top: 0; left: 0;  bottom: 0;
+			z-index: 1;
+			width: 100px;
+			color: white;
+
+			&:hover{
+				color: $primary;
+			}
+
+			&:last-child{
+				left: unset;
+				right: 0;
+			}
+
+			i{
+				font-size: 50px;
+			}
+		}
+	}
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: $desktop) {
+	.carousel{
+		height: 255px;
+
+		// --- Items
+		.carousel_items{
+			height: 255px;
+			// --- Item
+			.carousel_item{
+				height: 255px;
+
+				img{
+					height: 255px;
+				}
+			}
+		}
+
+		// --- Indicator
+		.carousel_indicator{
+			button{
+				i{
+					font-size: 30px;
+				}
+			}
+		}
+	}
+}

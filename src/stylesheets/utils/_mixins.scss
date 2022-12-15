@@ -1,0 +1,12 @@
+// --- Center Mixin
+@mixin center($width){
+	position: relative;
+	margin: 0 auto;
+	height: inherit;
+	max-width: $width;
+}
+
+// --- Transition Mixin
+@mixin tms($time){
+	transition: $time
+}

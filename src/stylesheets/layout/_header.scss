@@ -1,0 +1,76 @@
+// --- Import
+@import "../utils/variables";
+
+// --- Header
+header{
+	position: fixed;
+	width: 100vw;
+	height: $header_height;
+	z-index: 99;
+	background-color: white;
+
+	// --- Center
+	.center{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	// --- Logo
+	.header_logo{
+		img{
+			height: 50px;
+		}
+	}
+
+	// --- Menu
+	.header_menu{
+		ul{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 50px;
+
+			li{
+				a{
+					font-size: 18px;
+					color: $primary;
+					font-weight: 500;
+
+					&:hover, &.active{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: $desktop) {
+	header{
+		padding: 0 20px;
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	header{
+		// --- Logo
+		.header_logo{
+			img{
+				height: 40px;
+			}
+		}
+
+		// --- Menu
+		.header_menu{
+			ul{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 20px;
+			}
+		}
+	}
+}

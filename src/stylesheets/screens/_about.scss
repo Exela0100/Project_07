@@ -1,0 +1,56 @@
+// --- Import
+@import "../utils/variables";
+
+// --- About
+.about{
+	// --- Header
+	.about_header{
+		// --- Cover
+		.about_cover{
+			position: relative;
+			background-color: black;
+			height: 223px;
+			width: 100%;
+			border-radius: 25px;
+			overflow: hidden;
+
+			&:before{
+				content: '';
+				background: rgba(black, .3);
+				position: absolute;
+				top: 0;left: 0;right: 0;bottom: 0;
+				border-radius: 25px;
+			}
+
+			img{
+				height: 223px;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	// --- Section
+	.about_section{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding: 20px 100px;
+	}
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: $desktop) {
+	.about{
+		padding: 0 20px;
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.about{
+		// --- Section
+		.about_section{
+			padding: 20px 0;
+		}
+	}
+}

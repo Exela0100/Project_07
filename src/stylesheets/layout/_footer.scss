@@ -1,0 +1,43 @@
+// --- Footer
+footer{
+	background-color: black;
+	height: 210px;
+
+	// --- Center
+	.center{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	// --- Logo
+	.footer_logo{
+		margin-bottom: 30px;
+
+		img{
+			height: 40px;
+		}
+	}
+
+	// --- Copy
+	.footer_copy{
+		p{
+			font-size: 18px;
+			font-weight: 500;
+			color: white;
+		}
+	}
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: $tablet) {
+	footer{
+		// --- Copy
+		.footer_copy{
+			p{
+				font-size: 14px;
+			}
+		}
+	}
+}

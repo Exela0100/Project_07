@@ -1,0 +1,128 @@
+// --- Import
+@import "../utils/variables";
+
+// --- Index
+.index{
+	// --- Header
+	.index_header{
+		margin-top: 20px;
+
+		// --- Cover
+		.index_cover{
+			position: relative;
+			background-color: black;
+			height: 223px;
+			width: 100%;
+			border-radius: 25px;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:before{
+				content: '';
+				background: url("../../assets/images/cover.png") no-repeat center;
+				background-size: cover;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: 25px;
+				opacity: 70%;
+			}
+
+			p{
+				position: relative;
+				z-index: 2;
+				font-weight: 500;
+				font-size: 40px;
+				color: white;
+			}
+		}
+	}
+
+	// --- Section
+	.index_section{
+		margin-top: 40px;
+		background-color: $grey;
+		border-radius: 25px;
+		padding: 60px;
+
+		// --- Housing
+		.index_housing{
+			display: flex;
+			flex-wrap: wrap;
+			gap: 60px;
+			justify-content: center;
+		}
+	}
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: $desktop) {
+	.index{
+		padding: 0 20px;
+
+		// --- Header
+		.index_header{
+			margin-top: 0;
+
+			// --- Cover
+			.index_cover{
+				p{
+					font-size: 30px;
+				}
+			}
+
+		}
+
+		// --- Section
+		.index_section{
+			padding: 40px;
+
+			// --- Housing
+			.index_housing{
+				display: flex;
+				flex-wrap: wrap;
+				gap: 30px;
+				justify-content: flex-start;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.index{
+		// --- Header
+		.index_header{
+			margin-top: 0;
+
+			// --- Cover
+			.index_cover{
+				height: 111px;
+				justify-content: flex-start;
+				padding: 20px;
+
+				p{
+					font-size: 24px;
+				}
+			}
+
+		}
+
+		// --- Section
+		.index_section{
+			padding: 0;
+			background-color: white;
+
+			// --- Housing
+			.index_housing{
+				display: flex;
+				flex-wrap: nowrap;
+				flex-direction: column;
+				gap: 20px;
+			}
+		}
+	}
+}

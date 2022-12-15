@@ -1,0 +1,24 @@
+// --- Import
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// --- Container
+.container{
+	height: 100vh;
+
+	// --- Header
+	@import "../layout/header";
+
+	// --- Main
+	main{
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		position: relative;
+		padding-top: $header_height;
+		padding-bottom: 50px;
+	}
+
+	// --- Footer
+	@import "../layout/footer";
+}

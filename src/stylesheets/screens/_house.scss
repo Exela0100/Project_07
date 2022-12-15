@@ -1,0 +1,194 @@
+// --- Import
+@import "../utils/variables";
+
+// --- House
+.house{
+	// --- Header
+	.house_header{
+		margin-top: 20px;
+	}
+
+	// --- Section
+	.house_section{
+		margin-top: 20px;
+
+		// --- Head
+		.house_head{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+			flex-wrap: wrap;
+
+			// --- Title
+			.house_title{
+				flex-grow: 1;
+				gap: 5px;
+				display: flex;
+				flex-direction: column;
+				flex: 49%;
+
+				h2{
+					font-size: 30px;
+					font-weight: 500;
+					color: $primary;
+				}
+
+				p{
+					font-size: 18px;
+					font-weight: 500;
+					color: $primary;
+				}
+			}
+
+			// --- Host
+			.house_host{
+				display: flex;
+				align-items: center;
+				gap: 20px;
+				flex: 48%;
+				justify-content: flex-end;
+
+				p{
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
+					font-weight: 500;
+					color: $primary;
+
+					span{
+						display: block;
+					}
+				}
+
+				img{
+					height: 64px;
+					width: 64px;
+					object-fit: cover;
+					border-radius: 100px;
+				}
+			}
+
+			// --- Tags
+			.house_tags{
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				p{
+					padding: 5px 10px;
+					background-color: $primary;
+					color: white;
+					text-align: center;
+					border-radius: 10px;
+					font-size: 14px;
+				}
+			}
+
+			// --- Rating
+			.house_rating{
+				display: flex;
+				gap: 10px;
+
+				i{
+					color: #E3E3E3;
+					font-size: 25px;
+
+					// --- Check
+					&.house_check{
+						color: $primary;
+					}
+				}
+			}
+		}
+
+		// --- Info
+		.house_info{
+			margin-top: 20px;
+			display: flex;
+			flex-direction: row;
+			gap: 40px;
+		}
+	}
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: $desktop) {
+	.house{
+		padding: 0 20px;
+
+		// --- Header
+		.house_header{
+			margin-top: 0;
+		}
+
+		// --- Section
+		.house_section{
+			// --- Head
+			.house_head{
+				// --- Title
+				.house_title{
+					h2{
+						font-size: 20px;
+					}
+
+					p{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.house{
+		// --- Section
+		.house_section{
+			// --- Head
+			.house_head{
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				position: relative;
+
+				// --- Title
+				.house_title{
+					width: 100%;
+
+					h2{
+						font-size: 18px;
+					}
+
+					p{
+						font-size: 14px;
+					}
+				}
+
+				// --- Host
+				.house_host{
+					position: absolute;
+					right: 0;
+					bottom: -10px;
+
+					img{
+						height: 50px;
+						width: 50px;
+					}
+				}
+
+				// --- Rating
+				.house_rating{
+					margin-top: 20px;
+				}
+			}
+
+			// --- Info
+			.house_info{
+				margin-top: 40px;
+				flex-direction: column;
+				gap: 20px;
+			}
+		}
+	}
+}
