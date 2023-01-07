@@ -61,6 +61,21 @@
 			}
 		}
 	}
+
+	// --- Number
+	.carousel_number {
+		position: absolute;
+		bottom: 0; left: 0; right: 0;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+
+		p{
+			font-weight: 500;
+			font-size: 20px;
+			color: white;
+		}
+	}
 }
 
 /* --- Responsive --- */

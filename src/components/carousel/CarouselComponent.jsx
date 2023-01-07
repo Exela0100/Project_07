@@ -13,11 +13,11 @@ export const ItemCarousel = ({children}) => {
 	)
 }
 
-
 // --- Carousel
 const CarouselComponent = ({children}) => {
 	// --- State
 	const [current, setCurrent] = useState(0)
+	console.log(current+1,Children.count(children))
 
 	// --- Update current
 	const updateIndex = (index) => {
@@ -41,14 +41,23 @@ const CarouselComponent = ({children}) => {
 					return cloneElement(child)
 				})}
 			</div>
-			<div className="carousel_indicator">
-				<button onClick={() => updateIndex(current - 1)}>
-					<i className="fa-solid fa-chevron-left"></i>
-				</button>
-				<button onClick={() => updateIndex(current + 1)}>
-					<i className="fa-solid fa-chevron-right"></i>
-				</button>
-			</div>
+			{
+				Children.count(children) > 1 && (
+					<>
+						<div className="carousel_indicator">
+							<button onClick={() => updateIndex(current - 1)}>
+								<i className="fa-solid fa-chevron-left"></i>
+							</button>
+							<button onClick={() => updateIndex(current + 1)}>
+								<i className="fa-solid fa-chevron-right"></i>
+							</button>
+						</div>
+						<div className="carousel_number">
+							<p>{current+1}/{Children.count(children)}</p>
+						</div>
+					</>
+				)
+			}
 		</div>
 	)
 }

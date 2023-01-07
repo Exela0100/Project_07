@@ -1,4 +1,5 @@
 // --- Dependencies
+import {useEffect} from 'react'
 import {useLocation, useNavigate} from 'react-router'
 
 // --- Style
@@ -7,7 +8,7 @@ import '../stylesheets/screens/_house.scss'
 // --- Components
 import CarouselComponent, {ItemCarousel} from '../components/carousel/CarouselComponent'
 import CollapsibleComponent from '../components/collapsible/CollapsibleComponent'
-import {useEffect} from "react";
+import TagComponent from '../components/tag/TagComponent'
 
 // --- Home
 export default function HomeScreen() {
@@ -40,7 +41,7 @@ export default function HomeScreen() {
 							<img src={state?.item.host.picture} alt=""/>
 						</div>
 						<div className="house_tags">
-							{state?.item.tags.map((tag, index) => <p key={index}>{tag}</p>)}
+							{state?.item.tags.map((tag, index) => <TagComponent key={index} tag={tag}/>)}
 						</div>
 						<div className="house_rating" data-rating={state?.item.rating}>
 							{
